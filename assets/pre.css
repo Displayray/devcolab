@@ -1,0 +1,137 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Accelerator';
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 1.11111111;
+  letter-spacing: -0.9px;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 1.13333333;
+  letter-spacing: -0.6px;
+}
+
+.h3 {
+  font-size: 30px;
+  line-height: 1.1538461538;
+  letter-spacing: -0.4px;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: -0.3px;
+}
+
+.h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.text-sec {
+  font-size: 14px;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 741px) {
+  .h1 {
+    line-height: 1.0416666667;
+    letter-spacing: -1px;
+  }
+
+  .h2 {
+    line-height: 1.1052631579;
+    letter-spacing: -1px;
+  }
+
+  .h3 {
+    line-height: 1.0625;
+    letter-spacing: -0.8px;
+  }
+
+  .h4 {
+    line-height: 1.1666666667;
+    letter-spacing: -0.6px;
+  }
+
+  .h5 {
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+
+  .h6 {
+    line-height: 1.2222222222;
+  }
+}
+
+.page-width {
+  width: 1400px;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+section {
+  /*padding-top: 36px;
+  padding-bottom: 36px;*/
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.button {
+  font-weight: 600;
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.card {
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  background-color: var(--color-bg-layer);
+}
+
+.gap-sm {
+  gap: var(--gap-sm);
+}
+
+.gap-xl {
+  gap: var(--gap-xl);
+}
+
+.transition-150 {
+  transition: 150ms all ease-out;
+}
+
+.transition-300 {
+  transition: 300ms all ease-out;
+}
+
+.transition-500 {
+  transition: 500ms all ease-out;
+}
+
+.transition-1000 {
+  transition: 1s all ease-out;
+}

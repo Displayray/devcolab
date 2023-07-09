@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype'),
+    url('./fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Accelerator';
+  src: url('./fonts/accelerator.ttf') format('truetype');
+}
+
+:root {
+  --color-primary: #00b16a;
+  --color-secondary: #00a65a;
+  --color-bg: #1e1e1e;
+  --color-bg-alternative: #ff7f50;
+  --color-bg-layer: rgba(255, 255, 255, 0.2);
+  --color-font: #f2eaf6;
+  --color-font-gray: #6c6a6c;
+  --color-font-switch: #36454f;
+  --color-font-color: var(--color-primary);
+  --gap-xl: 24px;
+  --gap-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+}
