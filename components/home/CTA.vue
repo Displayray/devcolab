@@ -10,7 +10,7 @@
                 opportunities!
             </p>
             <div class="flex gap-sm">
-                <NuxtLink to="/account/login" class="button">
+                <NuxtLink to="/user" class="button">
                     Get Started
                 </NuxtLink>
                 <!--<NuxtLink to="/account" class="button !bg-transparent">
