@@ -1,10 +1,10 @@
 <script setup>
-let animationDuratuin = 30000;
+/*let animationDuratuin = 30000;
 let frameDuration = 1000 / 60;
 let totalFrames = Math.round(animationDuratuin / frameDuration)
 let easeOutQuad = t => t * (2 - t);
 
-/*function animateCountUp(el) {
+function animateCountUp(el) {
     let frame = 0;
     let countTo = parseInt(el.innerHTML, 10)
 
@@ -43,7 +43,7 @@ document.addEventListener("scroll", () => {
 </script>
 
 <template>
-    <section class="page-width" id="section-statistics">
+    <section class="page-width" id="section-statistics" data-aos="fade-up" data-aos-duration="1000" ref="statSection">
         <span
             class="flex flex-row-reverse items-center font-semibold text-[var(--color-font-gray)] whitespace-nowrap">Statistic
             <div class="w-full h-1 mr-4 rounded bg-[var(--color-font-gray)] block"></div>

@@ -1,5 +1,5 @@
 <template>
-    <section class="page-width">
+    <section class="page-width" data-aos="fade-up" data-aos-duration="1000">
         <span class="flex items-center font-semibold text-[var(--color-font-gray)] whitespace-nowrap">Reference
             <div class="w-full h-1 ml-4 rounded bg-[var(--color-font-gray)] block"></div>
         </span>
