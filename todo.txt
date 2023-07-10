@@ -3,3 +3,28 @@ Shadow
 Stats Upcount
 CTA second button
 hiw banner
+
+Teams search Dev
+Dev search Dev
+Devs
+
+
+https://webdesign.tutsplus.com/tutorials/pagination-with-vanilla-javascript--cms-41896
+
+
+/dev/username
+
+Job Tags
+<div class="flex gap-2">
+                    <span class="px-3 py-1 bg-[rgba(0,0,0,.4)] flex items-center rounded-lg">
+                        <i class="fa-solid fa-tag mr-2"></i>
+                        <p class="text-sm">Website</p>
+                    </span>
+                </div>
+
+
+
+when data -> vereinfache Componenten
+
+/dev such seite
+

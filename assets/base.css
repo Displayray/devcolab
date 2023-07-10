@@ -31,4 +31,22 @@
 
 body {
   font-family: 'Montserrat';
+  background-color: var(--color-bg);
+  color: var(--color-font);
+}
+
+/* Filter */
+.filter-item[open] i.fa-chevron-down {
+  transform: rotateX(180deg);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }

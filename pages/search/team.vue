@@ -3,9 +3,14 @@
         <Navbar />
 
         <section class="page-width">
-            Team
+            <h1 class="h2 mb-12">Connect with Teams</h1>
+
+            <div class="flex gap-6 flex-col-reverse xl:flex-row">
+                <SearchTeams />
+                <SearchFilterTeam />
+            </div>
         </section>
 
-        <HomeFooter/>
+        <HomeFooter />
     </div>
 </template>

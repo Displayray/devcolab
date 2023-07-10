@@ -1,7 +1,7 @@
 <template>
     <div class="bg-[var(--color-primary)]">
         <section class="page-width flex flex-col">
-            <h2 class="h3">The Place to Connect Freelance-Developer</h2>
+            <h2 class="h3 mb-2">The Place to Connect Freelance-Developer</h2>
             <hr>
 
             <div class="flex flex-wrap gap-6 justify-between mt-6">

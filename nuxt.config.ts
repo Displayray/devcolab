@@ -15,6 +15,10 @@ export default defineNuxtConfig({
           defer: true
         }
       ]
+    },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in'
     }
   },
   css: [

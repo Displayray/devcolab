@@ -22,7 +22,7 @@ const props = defineProps({
                         class="inline-block mr-2 py-2 px-6 rounded text-center hover:bg-[var(--color-bg-layer)]">
                         Teams
                     </NuxtLink>
-                    <NuxtLink to="search/job"
+                    <NuxtLink to="/search/job"
                         class="inline-block mr-2 py-2 px-6 rounded text-center hover:bg-[var(--color-bg-layer)]">
                         Jobs
                     </NuxtLink>
@@ -48,7 +48,7 @@ const props = defineProps({
             </div>
 
             <div :class="!mobileNav ? 'translate-x-[110%]' : 'translate-x-0'"
-                class="transition-300 font-medium flex flex-col items-start h-screen fixed px-6 top-[104px] left-0 backdrop-blur-3xl w-full">
+                class="transition-300 font-medium flex flex-col items-start h-screen fixed px-6 top-[104px] left-0 bg-[var(--color-bg)] w-full">
                 <NuxtLink to="/"
                     class="inline-block mr-2 py-2 px-6 rounded text-left w-full hover:bg-[var(--color-bg-layer)]">
                     Home
@@ -61,7 +61,7 @@ const props = defineProps({
                     class="inline-block mr-2 py-2 px-6 rounded text-left w-full hover:bg-[var(--color-bg-layer)]">
                     Teams
                 </NuxtLink>
-                <NuxtLink to="search/job"
+                <NuxtLink to="/search/job"
                     class="inline-block mr-2 py-2 px-6 rounded text-left w-full hover:bg-[var(--color-bg-layer)]">
                     Jobs
                 </NuxtLink>
