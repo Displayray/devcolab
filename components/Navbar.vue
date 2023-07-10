@@ -29,7 +29,7 @@ const props = defineProps({
                 </div>
             </div>
             <div class="flex items-center">
-                <NuxtLink to="/account/login" class="button">
+                <NuxtLink to="/user" class="button">
                     Account
                 </NuxtLink>
             </div>
@@ -65,7 +65,7 @@ const props = defineProps({
                     class="inline-block mr-2 py-2 px-6 rounded text-left w-full hover:bg-[var(--color-bg-layer)]">
                     Jobs
                 </NuxtLink>
-                <NuxtLink to="/account/login" class="button w-full text-center mt-12">
+                <NuxtLink to="/user" class="button w-full text-center mt-12">
                     Account
                 </NuxtLink>
             </div>
