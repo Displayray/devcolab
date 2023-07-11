@@ -9,10 +9,10 @@
                     <ul class="list-none pl-0">
                         <p class="font-semibold mb-2">About Us</p>
                         <li class="text-sec tracking-wide">
-                            <NuxtLink>Imprint</NuxtLink>
+                            <NuxtLink to="/imprint">Imprint</NuxtLink>
                         </li>
                         <li class="text-sec tracking-wide">
-                            <NuxtLink>Privacy</NuxtLink>
+                            <NuxtLink to="/privacy">Privacy</NuxtLink>
                         </li>
                         <li class="text-sec tracking-wide">
                             <NuxtLink>ANB & AGB</NuxtLink>

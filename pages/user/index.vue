@@ -30,6 +30,6 @@ const logout = async () => {
 
 <template>
     <Navbar />
-    User
+    User Page
     <HomeFooter />
 </template>
