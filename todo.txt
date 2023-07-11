@@ -26,5 +26,5 @@ Job Tags
 
 when data -> vereinfache Componenten
 
-/dev such seite
+Google, Github Auth
 
