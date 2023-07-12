@@ -9,10 +9,10 @@ const logout = async () => {
 
     user.value = null
     try {
-        /*await $fetch("/api/_supabase/session", {
+        await $fetch("/api/_supabase/session", {
             method: "POST",
             body: { event: "SIGNED_OUT", session: null }
-        })*/
+        })
     } catch (error) {
         console.log(error)
     }
@@ -26,10 +26,12 @@ const logout = async () => {
 
     location.reload()
 }
+
+//gapi.auth2.init()
 </script>
 
 <template>
     <Navbar />
-    User
+    <button class="button" @click="logout">Logout</button>
     <HomeFooter />
 </template>

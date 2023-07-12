@@ -28,3 +28,24 @@ when data -> vereinfache Componenten
 
 Google, Github Auth
 
+
+
+https://developers.google.com/identity/sign-in/web/sign-in?hl=de
+https://developers.google.com/identity/sign-in/web/people?hl=de
+
+uid
+firstname
+lastname
+avatar_url
+username
+country
+age
+gender
+portofolio_url
+skills[]
+role
+about
+socials[]
+language[]
+started
+created_at

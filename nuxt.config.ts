@@ -13,6 +13,11 @@ export default defineNuxtConfig({
           key: 'fontawesome',
           src: 'https://kit.fontawesome.com/06a3850196.js',
           defer: true
+        },
+        {
+          src: "https://apis.google.com/js/platform.js",
+          defer: true,
+          async: true
         }
       ]
     },
