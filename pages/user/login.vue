@@ -6,14 +6,23 @@ const props = defineProps({
 
 const errorMessage = ref("")
 
-const signInName = ref("")
-const signInFirst  = ref("")
-const signInLast = ref("")
+const signUpName = ref("")
+const signUpFirst  = ref("")
+const signUpLast = ref("")
+const signUpMail = ref("")
+const signUpPW = ref("")
+
 const signInMail = ref("")
 const signInPW = ref("")
 
-const signUpMail = ref("")
-const signUpPW = ref("")
+const user = useSupabaseUser();
+const supabase = useSupabaseClient()
+
+let loginGoogle = () => {
+    supabase.auth.signInWithOAuth({
+        provider: "google"
+    })
+}
 </script>
 
 <template>
@@ -30,25 +39,25 @@ const signUpPW = ref("")
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-user"></i>
                                     </span>
-                                    <input type="text" name="username" v-modal="signInName" class="!bg-transparent outline-none px-2 w-full" >
+                                    <input type="text" name="username" v-model="signUpName" class="!bg-transparent outline-none px-2 w-full" >
                                 </div>
                             </div>
-                            <div class="col-span-3">
+                            <div class="col-span-6 sm:col-span-3">
                                 <label for="firstname" class="font-semibold text-sec">First Name</label>
                                 <div class="flex bg bg-white rounded-lg">
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-user"></i>
                                     </span>
-                                    <input type="text" name="firstname" v-modal="signInFirst" class="!bg-transparent outline-none px-2 w-full">
+                                    <input type="text" name="firstname" v-model="signUpFirst" class="!bg-transparent outline-none px-2 w-full">
                                 </div>
                             </div>
-                            <div class="col-span-3">
+                            <div class="col-span-6 sm:col-span-3">
                                 <label for="lastname" class="font-semibold text-sec">Last Name</label>
                                 <div class="flex bg bg-white rounded-lg">
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-user"></i>
                                     </span>
-                                    <input type="text" name="lastname" v-modal="signInLast" class="!bg-transparent outline-none px-2 w-full">
+                                    <input type="text" name="lastname" v-model="signUpLast" class="!bg-transparent outline-none px-2 w-full">
                                 </div>
                             </div>
                             <div class="col-span-full">
@@ -57,7 +66,7 @@ const signUpPW = ref("")
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-at"></i>
                                     </span>
-                                    <input type="email" name="email" v-modal="signInMail" class="!bg-transparent outline-none px-2 w-full">
+                                    <input type="email" name="email" v-model="signUpMail" class="!bg-transparent outline-none px-2 w-full">
                                 </div>
                             </div>
                             <div class="col-span-full">
@@ -66,14 +75,14 @@ const signUpPW = ref("")
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-lock"></i>
                                     </span>
-                                    <input :type="!showPass ? 'password' : 'text'" name="pass" v-modal="signInPW" class="!bg-transparent outline-none px-2 w-full">
+                                    <input :type="!showPass ? 'password' : 'text'" name="pass" v-model="signUpPW" class="!bg-transparent outline-none px-2 w-full">
                                     <span @click="showPass = !showPass" class="flex justify-center items-center aspect-square h-10 border-l-2 cursor-pointer">
                                         <i :class="showPass ? 'fa-solid fa-eye-low-vision' : 'fa-solid fa-eye'"></i>
                                     </span>
                                 </div>
                             </div>
                             
-                            <button class="button flex text-[var(--color-font)] whitespace-nowrap col-span-3 justify-center items-center mt-2">
+                            <button class="button flex text-[var(--color-font)] whitespace-nowrap col-span-6 sm:col-span-3 justify-center items-center mt-2">
                                 <i class="fa-solid fa-user-plus mr-2"></i>Create Account
                             </button>
                             
@@ -87,7 +96,7 @@ const signUpPW = ref("")
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-at"></i>
                                     </span>
-                                    <input type="email" name="email" v-modal="signUpMail" class="!bg-transparent outline-none px-2 w-full">
+                                    <input type="email" name="email" v-model="signInMail" class="!bg-transparent outline-none px-2 w-full">
                                 </div>
                             </div>
                             <div class="col-span-full">
@@ -96,7 +105,7 @@ const signUpPW = ref("")
                                     <span class="flex justify-center items-center aspect-square h-10 border-r-2">
                                         <i class="fa-solid fa-lock"></i>
                                     </span>
-                                    <input :type="!showPass ? 'password' : 'text'" name="pass" v-modal="signUpPW" class="!bg-transparent outline-none px-2 w-full">
+                                    <input :type="!showPass ? 'password' : 'text'" name="pass" v-model="signInPW" class="!bg-transparent outline-none px-2 w-full">
                                     <span @click="showPass = !showPass" class="flex justify-center items-center aspect-square h-10 border-l-2 cursor-pointer">
                                         <i :class="showPass ? 'fa-solid fa-eye-low-vision' : 'fa-solid fa-eye'"></i>
                                     </span>
@@ -111,6 +120,11 @@ const signUpPW = ref("")
                                 account</p>
                         </div>
                     </div>
+                </div>
+                <div class="flex justify-center my-4">
+                    <button @click="loginGoogle">
+                        <img class="w-48" src="/assets/img/google_signin_dark.png" alt="Google Sign in">
+                    </button>
                 </div>
                 <p v-if="errorMessage" class="text-sm font-light text-red-700">* {{ errorMessage }}</p>
         </div>
