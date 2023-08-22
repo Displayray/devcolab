@@ -112,6 +112,12 @@ section {
   background-color: var(--color-bg-layer);
 }
 
+.card-team {
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  background-color: var(--color-bg-layer);
+}
+
 .gap-sm {
   gap: var(--gap-sm);
 }
@@ -134,4 +140,10 @@ section {
 
 .transition-1000 {
   transition: 1s all ease-out;
+}
+
+.icons-black i,
+.icons-black input,
+.icons-black textarea {
+  color: black;
 }

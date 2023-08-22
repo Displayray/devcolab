@@ -15,6 +15,7 @@
   --color-bg: #1e1e1e;
   --color-bg-alternative: #ff7f50;
   --color-bg-layer: rgba(255, 255, 255, 0.2);
+  --color-bg-layer-al: rgba(0, 0, 0, 0.1);
   --color-font: #f2eaf6;
   --color-font-gray: #6c6a6c;
   --color-font-switch: #36454f;
@@ -49,4 +50,35 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
+}
+
+/* custom select */
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: white;
+}
+
+.select-items div,
+.select-selected {
+  padding-left: 0.5rem; /* 8px */
+  padding-right: 0.5rem; /* 8px */
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
 }

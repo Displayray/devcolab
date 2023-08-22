@@ -57,43 +57,35 @@ created_at
 fade between pages not working
 
 
+Dashboard -> new messages -> learned new skills? add them -> After login - Set infos/socials/languages/... -> premium? -> profile/team views
+Messanger -> chats
+My Team -> form -> preview
+My Profile -> form -> preview
+Portfolio -> premium? -> code -> apply + info for review
+Settings
+
+https://www.programonaut.com/how-to-create-realtime-chat-application-using-supabase/
+
+team profiles
+-> multiple searchs
+
+developer
+-> search
+
+jobs
 
 
 
-<script setup>
-const user = useSupabaseUser()
-const supabase = useSupabaseClient()
-
-if (!user.value) navigateTo("/user/login")
-
-const logout = async () => {
-    const { error } = supabase.auth.signOut()
-
-    user.value = null
-    try {
-        await $fetch("/api/_supabase/session", {
-            method: "POST",
-            body: { event: "SIGNED_OUT", session: null }
-        })
-    } catch (error) {
-        console.log(error)
-    }
+    messanger: Boolean,
+    myTeam: Boolean,
+    myProfile: Boolean,
+    portfolio: Boolean,
+    settings: Boolean,
+    accountSettings: Boolean,
 
 
-    navigateTo("/user/login")
+    https://rahuldkjain.github.io/gh-profile-readme-generator/
+    skills
 
-    if (error) {
-        console.log(error)
-    }
 
-    location.reload()
-}
-
-//gapi.auth2.init()
-</script>
-
-<template>
-    <Navbar />
-    <button class="button" @click="logout">Logout</button>
-    <HomeFooter />
-</template>
+    skill select input names

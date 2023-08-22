@@ -1,5 +1,5 @@
 <template>
-    <div class="" style="background-color: var(--color-bg); color: var(--color-font);">
+  <div class="" style="background-color: var(--color-bg); color: var(--color-font);">
     <HomeLanding />
     <HomeHighlight />
     <!--<no-ssr>-->
