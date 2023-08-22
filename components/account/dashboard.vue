@@ -101,7 +101,7 @@ function changeWindow(w) {
                     <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         class="w-10 h-auto aspect-square object-cover" alt="Avatar">
                 </span>
-                <p class="font-medium mb-0">{{ user.user_metadata.username }}</p>
+                <p v-if="user" class="font-medium mb-0">{{ user.user_metadata.username }}</p>
 
                 <div :class="!accountPopup ? 'hidden' : 'flex'"
                     class="absolute bottom-[130%] flex-col rounded-md bg-[var(--color-bg-layer)] px-4 py-2 w-[calc(100%-1rem)] text-sec">
@@ -120,10 +120,10 @@ function changeWindow(w) {
         <main class="flex flex-col px-4 py-8 w-full border-[var(--color-bg-layer)] border-l-2">
 
             <div id="dashboard" class="flex flex-col">
-                <h2 class="h2 text-center w-full mb-10">Welcome back, <span class="text-[var(--color-primary)]">{{
-                    user.user_metadata.username }}</span> 👋
+                <h2 v-if="user" class="h2 text-center w-full mb-10">Welcome back, <span
+                        class="text-[var(--color-primary)]">{{
+                            user.user_metadata.username }}</span> 👋
                 </h2>
-                {{ dashboard }}
             </div>
 
             <div id="messanger" class="flex flex-col">
