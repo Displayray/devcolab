@@ -17,7 +17,7 @@ const signInMail = ref("")
 const signInPW = ref("")
 
 const user = useSupabaseUser();
-const supabase = useSupabaseClient()
+const supabase = useSupabaseAuthClient()
 
 if (user.value) navigateTo("/user")
 
