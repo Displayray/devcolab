@@ -38,5 +38,8 @@ export default defineNuxtConfig({
     {
       src: "@/plugins/aos", mode: "client"
     }
-  ]
+  ],
+  nitro: {
+    prerender: { ignore: ["/user"] }
+  }
 })
