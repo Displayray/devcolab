@@ -21,11 +21,6 @@ const supabase = useSupabaseClient()
 
 if (user.value) navigateTo("/user")
 
-/*let loginGoogle = () => {
-    supabase.auth.signInWithOAuth({
-        provider: "google"
-    })
-}*/
 
 let signUp = async () => {
     if (signUpMail.value == "" || signUpPW.value == "") {
