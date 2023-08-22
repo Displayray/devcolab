@@ -7,7 +7,7 @@ if (!user.value) navigateTo("/user/login")
 
 <template>
     <Navbar />
-    <AccountDashboard />
+    <!--<AccountDashboard />-->
 
     <HomeFooter />
 </template>
