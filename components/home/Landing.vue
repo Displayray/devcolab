@@ -3,7 +3,7 @@
 
 <template>
     <div
-        style="background-image: url('/assets/img/ldp.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+        style="background-image: url('/ldp.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         <Navbar />
 
         <section class="page-width flex flex-col-reverse gap-y-10 lg:flex-row lg:items-start items-center">
