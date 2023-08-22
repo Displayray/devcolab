@@ -10,14 +10,14 @@ const logout = async () => {
     const { error } = supabase.auth.signOut()
 
     user.value = null
-    try {
+    /*try {
         await $fetch("/api/_supabase/session", {
             method: "POST",
             body: { event: "SIGNED_OUT", session: null }
         })
     } catch (error) {
         console.log(error)
-    }
+    }*/
 
 
     navigateTo("/user/login")
